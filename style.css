@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(239,239,239,255);
+    min-height: 1500px;
+}
+
+/* Entry image */
+
+#mountain {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mountain::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
+}
+
+#mountain::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: gray; */
+    z-index: 10; 
+    mix-blend-mode: color;
+}
+
+#mountain img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#nameIs {
+    position: relative;
+    color: #fff;
+    font-size: 6rem;
+    z-index: 1;
+    text-shadow: 2px 2px 8px black;
+    font-family: 'Roboto Slab', serif;
+}
+
+.banner-container {
+    background-image: linear-gradient(to bottom, rgba(239,239,239,255), white)
+}
+
+.banner {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 7.5%;
+    margin-left: 40%;
+}
+
+.about-left {
+    justify-content: center;
+    text-align: center;
+}
+
+#about-img {
+    height: 400px;
+    width: 300px;
+    border-radius: 300px;
+}
+
+.about-right {
+    font-family: 'Caladea', serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.tech {
+    justify-content: center;
+    text-align: center;
+}
+
+.tech-logo {
+    height: 80px;
+    width: 50px;
+}
+
+.tech-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+    .tech-container { grid-template-columns: repeat(2, 1fr); }
+  }
+
+@media (min-width: 900px) {
+    .tech-container { grid-template-columns: repeat(3, 1fr); }
+  }
+/* rgba(239,239,239,255) grey from image 
+rgba(239,239,239,0) black opaque*/
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  .flip-card img {
+      object-fit: contain;
+      background-color: white;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    height: 300px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    height: 300px;
+  }
+
+  .partners {
+      height: 60vh;
+      width: 100vw;
+  }
+
+  .partners-text {
+    font-family: 'Lily Script One', cursive;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 30vh;
+  }
+
+  .contact {
+      height: 40vh;
+      width: 100vw;
+  }
+
+  .contact-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+    text-align: center;
+  }
+
+  .contact-info {
+      columns: 3;
+      margin-top: 10vh;
+  }
+
+  .contact-github {
+      width: 30vw;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  .contact-email {
+      width: 30vw;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  .contact-linkedin {
+      width: 30vw;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+  }
