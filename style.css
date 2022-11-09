@@ -53,12 +53,17 @@ body {
 }
 
 #nameIs {
+    margin-top: -15%;
     position: relative;
     color: #fff;
     font-size: 6rem;
-    z-index: 1;
+    z-index: 10;
     text-shadow: 2px 2px 8px black;
     font-family: 'Roboto Slab', serif;
+}
+
+#fg {
+    z-index: 15;
 }
 
 .banner-container {
